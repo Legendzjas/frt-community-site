@@ -1,0 +1,14 @@
+[
+  {
+    "name": "ARK Phoenix #1",
+    "type": "arkse",
+    "host": "1.2.3.4",
+    "port": 27015
+  },
+  {
+    "name": "Minecraft FRT",
+    "type": "minecraft",
+    "host": "mc.example.com",
+    "port": 25565
+  }
+]
