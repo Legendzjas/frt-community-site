@@ -7,8 +7,9 @@
   --lava:#ff5b2e;     /* orange lave */
   --ember:#ffb454;    /* braise */
   --glow:#ffd166;     /* halo doré */
-  --ice:#3dd6ff;      /* accent froid (contraste) */
+  --ice:#3dd6ff;      /* accent froid */
 }
+
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
@@ -16,7 +17,7 @@ body{
   background:radial-gradient(80vw 40vw at 70% -10%, rgba(255,91,46,.12), transparent),
              linear-gradient(180deg,#0a0b0f 0%, #0d0f15 100%);
   color:var(--text);
-  font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial
+  font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;
 }
 a{color:var(--ice);text-decoration:none}
 .container{width:min(1100px,92vw);margin-inline:auto;padding:24px 0}
@@ -29,7 +30,7 @@ header{
   position:sticky;top:0;z-index:20;
   background:rgba(10,12,16,.7);
   backdrop-filter:saturate(1.2) blur(10px);
-  border-bottom:1px solid rgba(255,255,255,.06)
+  border-bottom:1px solid rgba(255,255,255,.06);
 }
 nav a{color:var(--text);margin-right:14px}
 
@@ -37,32 +38,33 @@ nav a{color:var(--text);margin-right:14px}
 .btn{
   display:inline-block;padding:10px 14px;border-radius:12px;
   background:linear-gradient(90deg,var(--lava),var(--ember));
-  color:#0b0c10;font-weight:800;box-shadow:0 10px 24px rgba(255,91,46,.25)
+  color:#0b0c10;font-weight:800;box-shadow:0 10px 24px rgba(255,91,46,.25);
 }
 .btn.ghost{
-  background:#1b1d24;border:1px solid rgba(255,255,255,.08);color:var(--text);font-weight:700
+  background:#1b1d24;border:1px solid rgba(255,255,255,.08);color:var(--text);font-weight:700;
 }
 
 /* Hero volcanique */
 .hero{
-  padding:64px 0 42px; border-bottom:1px solid rgba(255,255,255,.06);
+  padding:64px 0 42px;
+  border-bottom:1px solid rgba(255,255,255,.06);
   background:
     radial-gradient(1200px 500px at 80% 0%, rgba(255,180,84,.10), transparent),
-    linear-gradient(180deg, rgba(0,0,0,.2), rgba(0,0,0,.55)),
-    url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat; /* volcan roche */
+    linear-gradient(180deg, rgba(0,0,0,.3), rgba(0,0,0,.65)),
+    url('https://i.imgur.com/7MxkLVd.jpeg') center/cover no-repeat;
 }
 .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center}
 .badge{
   display:inline-flex;gap:8px;align-items:center;padding:6px 10px;border-radius:999px;
-  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:var(--muted);font-size:13px
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:var(--muted);font-size:13px;
 }
 .title{
   font-size:clamp(32px,5vw,56px);line-height:1.05;margin:14px 0 10px;font-weight:900;
-  letter-spacing:-.02em;text-shadow:0 6px 22px rgba(0,0,0,.6)
+  letter-spacing:-.02em;text-shadow:0 6px 22px rgba(0,0,0,.6);
 }
 .phoenix-text{
   background:linear-gradient(90deg,var(--lava),var(--glow));
-  -webkit-background-clip:text;background-clip:text;color:transparent
+  -webkit-background-clip:text;background-clip:text;color:transparent;
 }
 .lead{color:#e5e7eb;max-width:60ch}
 
