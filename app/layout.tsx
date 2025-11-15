@@ -1,8 +1,9 @@
 import "./../styles/globals.css";
 
 export const metadata = {
-  title: "FRT — Fraternity | Communauté Gaming",
-  description: "Suivi serveurs, streamers et liens rapides. Là où d’autres tombent, nous renaissons."
+  title: "PHF / FRT — Communauté Gaming",
+  description:
+    "Suivi des serveurs, streamers et liens rapides. Là où d’autres tombent, nous renaissons.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -10,26 +11,33 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="fr">
       <body>
         <header>
-          <div className="container" style={{display:"flex",alignItems:"center",justifyContent:"space-between"}}>
-            <div style={{display:"flex",gap:12,alignItems:"center"}}>
-              {/* Logo FRT Phoenix animé */}
-              <img 
-                src="https://media.giphy.com/media/NzaAP8kgLwU894p4Hn/giphy.gif" 
-                alt="Logo FRT Phoenix"
+          <div
+            className="container"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+            }}
+          >
+            <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
+              {/* Logo simple FRT en pastille volcanique (pas d'image externe) */}
+              <div
                 style={{
-                  width: 46,
-                  height: 46,
+                  width: 36,
+                  height: 36,
                   borderRadius: "50%",
-                  objectFit: "cover",
-                  boxShadow: "0 0 12px rgba(255,91,46,0.65)"
-                }}
-                onError={(e) => {
-                  (e.currentTarget as HTMLImageElement).src = "https://i.imgur.com/NT4EFpQ.png";
+                  background:
+                    "radial-gradient(circle at 35% 30%, var(--glow), var(--lava))",
+                  boxShadow: "0 0 10px rgba(255,91,46,0.6)",
                 }}
               />
               <div>
-                <strong style={{display:"block",fontSize:"1.05rem"}}>FRT — Fraternity</strong>
-                <small style={{opacity:.8,fontSize:"0.85rem"}}>Là où d’autres tombent, nous renaissons</small>
+                <strong style={{ display: "block", fontSize: "1.05rem" }}>
+                  PHF / FRT
+                </strong>
+                <small style={{ opacity: 0.8, fontSize: "0.85rem" }}>
+                  Là où d’autres tombent, nous renaissons
+                </small>
               </div>
             </div>
             <nav>
@@ -44,7 +52,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="container">{children}</main>
 
         <footer className="container">
-          © {new Date().getFullYear()} FRT — Communauté gaming. Tous droits réservés.
+          © {new Date().getFullYear()} PHF / FRT — Communauté gaming. Tous droits réservés.
         </footer>
       </body>
     </html>
