@@ -1,60 +1,101 @@
-import "./../styles/globals.css";
-
-export const metadata = {
-  title: "FRT — Fraternity | Communauté Gaming",
-  description:
-    "Site communautaire FRT : informations, streamers et accès aux serveurs.",
-};
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function Home() {
   return (
-    <html lang="fr">
-      <body>
-        <header>
+    <>
+      {/* HERO volcanique avec ton fond Hero.png (géré dans globals.css) */}
+      <section className="hero">
+        <div
+          className="container"
+          style={{ maxWidth: "900px", margin: "0 auto" }}
+        >
+          <span className="badge">🔥 Communauté FRT</span>
+
+          <h1 className="title">
+            La fraternité <span className="phoenix-text">renaît des cendres</span>.
+          </h1>
+
+          <p className="lead">
+            Bienvenue chez <strong>Fraternity - FRT</strong> !
+            <br />
+            Voici notre site spécifique pour notre communauté :
+          </p>
+
+          <ul style={{ marginTop: 8, paddingLeft: 20 }}>
+            <li>Informations</li>
+            <li>Les streamers de notre communauté</li>
+            <li>Les accès à nos serveurs</li>
+          </ul>
+
+          <p className="lead" style={{ marginTop: 10 }}>
+            À chaque nouveau membre nous grandissons !
+            <br />
+            <em>« Là où d’autres tombent, nous renaissons »</em>
+          </p>
+
           <div
-            className="container"
             style={{
               display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
+              gap: 12,
+              marginTop: 18,
+              flexWrap: "wrap",
             }}
           >
-            <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
-              {/* Pastille « logo » FRT */}
-              <div
-                style={{
-                  width: 36,
-                  height: 36,
-                  borderRadius: "50%",
-                  background:
-                    "radial-gradient(circle at 35% 30%, var(--glow), var(--lava))",
-                  boxShadow: "0 0 10px rgba(255,91,46,0.6)",
-                }}
-              />
-              <div>
-                <strong style={{ display: "block", fontSize: "1.05rem" }}>
-                  FRT — Fraternity
-                </strong>
-                <small style={{ opacity: 0.8, fontSize: "0.85rem" }}>
-                  Là où d’autres tombent, nous renaissons
-                </small>
-              </div>
-            </div>
-            <nav>
-              <a href="/">Accueil</a>
-              <a href="/servers">Serveurs</a>
-              <a href="/streamers">Streamers</a>
-              <a href="/links">Liens</a>
-            </nav>
+            <a className="btn" href="/servers">
+              Voir les serveurs
+            </a>
+            <a className="btn ghost" href="/streamers">
+              Découvrir les streamers
+            </a>
+            <a className="btn ghost" href="/history">
+              Découvre l&apos;histoire de FRT
+            </a>
           </div>
-        </header>
+        </div>
+      </section>
 
-        <main className="container">{children}</main>
+      {/* Cartes d’accès */}
+      <section style={{ paddingTop: 32 }}>
+        <div className="grid">
+          {/* Serveurs */}
+          <article className="card">
+            <h3>🎮 Serveurs</h3>
+            <p>
+              Consulte l’état de nos serveurs FRT et les informations importantes
+              (IP, ports, type de serveur…).
+            </p>
+            <a className="btn" href="/servers">
+              Voir le suivi
+            </a>
+          </article>
 
-        <footer className="container">
-          © {new Date().getFullYear()} FRT — Communauté gaming. Tous droits réservés.
-        </footer>
-      </body>
-    </html>
+          {/* Streamers */}
+          <article className="card">
+            <h3>📺 Streamers</h3>
+            <p>
+              Découvre les streamers de la communauté FRT et soutiens-les en live.
+            </p>
+            <a className="btn" href="/streamers">
+              Voir les chaînes
+            </a>
+          </article>
+
+          {/* Discord (ancien liens rapides) */}
+          <article className="card">
+            <h3>💬 Rejoindre Discord</h3>
+            <p>
+              Rejoins le serveur Discord FRT pour discuter, suivre les annonces
+              et participer aux événements.
+            </p>
+            <a
+              className="btn"
+              href="https://discord.gg/mMgaaytKgJ"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Rejoindre FRT
+            </a>
+          </article>
+        </div>
+      </section>
+    </>
   );
 }
