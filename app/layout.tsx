@@ -1,9 +1,9 @@
 import "./../styles/globals.css";
 
 export const metadata = {
-  title: "PHF / FRT — Communauté Gaming",
+  title: "FRT — Fraternity | Communauté Gaming",
   description:
-    "Suivi des serveurs, streamers et liens rapides. Là où d’autres tombent, nous renaissons.",
+    "Site communautaire FRT : informations, streamers et accès aux serveurs.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             }}
           >
             <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
-              {/* Logo simple FRT en pastille volcanique (pas d'image externe) */}
+              {/* Pastille « logo » FRT */}
               <div
                 style={{
                   width: 36,
@@ -33,7 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               />
               <div>
                 <strong style={{ display: "block", fontSize: "1.05rem" }}>
-                  PHF / FRT
+                  FRT — Fraternity
                 </strong>
                 <small style={{ opacity: 0.8, fontSize: "0.85rem" }}>
                   Là où d’autres tombent, nous renaissons
@@ -52,7 +52,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="container">{children}</main>
 
         <footer className="container">
-          © {new Date().getFullYear()} PHF / FRT — Communauté gaming. Tous droits réservés.
+          © {new Date().getFullYear()} FRT — Communauté gaming. Tous droits réservés.
         </footer>
       </body>
     </html>
