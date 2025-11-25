@@ -50,16 +50,17 @@ export default function ServersPage() {
           <p>Serveur Nitrado FRT pour la nouvelle génération d&apos;ARK.</p>
           <ul className="list">
             <li>Nom : <strong>FRATERNITY</strong></li>
-            <li>IP : <code>37.10.115.184</code></li>
-            <li>Port jeu : <code>8140</code></li>
-            <li>Carte actuelle : Ragnarok_WP</li>
+            <li>IP : <code>37.10.100.8</code></li>
+            <li>Port jeu : <code>5170</code></li>
+            <li>Carte actuelle : TheIsland_WP (profil Ragnarok prêt)</li>
+            <li>Mot de passe serveur : <strong>aucun</strong> (connexion ouverte)</li>
           </ul>
 
           <p className="muted" style={{ marginTop: 12 }}>
             ASA n&apos;a pas toujours un lien officiel, mais sur PC via Steam tu peux
             tenter la connexion directe :
           </p>
-          <a className="btn" href="steam://connect/37.10.115.184:8140">
+          <a className="btn" href="steam://connect/37.10.100.8:5170">
             Connexion Steam (Ascended)
           </a>
           <p className="muted" style={{ marginTop: 10 }}>
