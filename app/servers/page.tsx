@@ -52,8 +52,8 @@ export default function ServersPage() {
             <li>Nom : <strong>FRATERNITY</strong></li>
             <li>IP : <code>37.10.100.8</code></li>
             <li>Port jeu : <code>5170</code></li>
-            <li>Carte actuelle : TheIsland_WP (profil Ragnarok prêt)</li>
-            <li>Mot de passe serveur : <strong>aucun</strong> (connexion ouverte)</li>
+            <li>Carte actuelle : <strong>Ragnarok</strong> (slot : Ragnarok_WP)</li>
+            <li>Mot de passe serveur : <strong>FRT</strong></li>
           </ul>
 
           <p className="muted" style={{ marginTop: 12 }}>
@@ -64,7 +64,8 @@ export default function ServersPage() {
             Connexion Steam (Ascended)
           </a>
           <p className="muted" style={{ marginTop: 10 }}>
-            Si le bouton ne fonctionne pas : ajoute l&apos;IP dans l&apos;onglet
+            Si un mot de passe est demandé en jeu, saisis : <strong>FRT</strong>. Si le
+            bouton ne fonctionne pas : ajoute l&apos;IP et le port dans l&apos;onglet
             <em> Favoris</em> de Steam puis rejoins depuis la liste des serveurs.
           </p>
         </article>
