@@ -5,11 +5,12 @@ export default function ServersPage() {
     <section className="shell">
       <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
         <Image
-          src="/frt-logo.svg"
+          src="/frt-logo.gif"
           alt="Logo FRT"
           width={44}
           height={44}
           priority
+          unoptimized
         />
         <div>
           <h1 className="section-head" style={{ margin: 0 }}>

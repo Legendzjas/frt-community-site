@@ -122,10 +122,12 @@ a {
 .nav a:active::after {
   content: "";
   position: absolute;
-  inset: -120%;
-  background: radial-gradient(circle at center, rgba(255, 184, 97, 0.4), rgba(255, 107, 61, 0.16), transparent 70%);
-  animation: flame-burst 340ms ease-out forwards;
+  inset: -40%;
+  background: radial-gradient(circle at center, rgba(255, 193, 112, 0.55), rgba(255, 118, 70, 0.22), transparent 70%);
+  animation: flame-burst 360ms ease-out forwards;
   pointer-events: none;
+  filter: blur(4px);
+  mix-blend-mode: screen;
 }
 
 .pill-cta {
@@ -268,10 +270,12 @@ a {
 .btn:active::after {
   content: "";
   position: absolute;
-  inset: -120%;
-  background: radial-gradient(circle at center, rgba(255, 184, 97, 0.55), rgba(255, 107, 61, 0.15), transparent 70%);
+  inset: -40%;
+  background: radial-gradient(circle at center, rgba(255, 193, 112, 0.65), rgba(255, 118, 70, 0.28), transparent 70%);
   animation: flame-burst 320ms ease-out forwards;
   pointer-events: none;
+  filter: blur(4px);
+  mix-blend-mode: screen;
 }
 
 .btn.secondary {
