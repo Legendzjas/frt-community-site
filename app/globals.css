@@ -109,12 +109,23 @@ a {
 .nav a {
   padding: 8px 10px;
   border-radius: 10px;
+  position: relative;
+  overflow: hidden;
 }
 
 .nav a:hover,
 .nav a:focus-visible {
   color: #fff;
   background: rgba(255, 255, 255, 0.06);
+}
+
+.nav a:active::after {
+  content: "";
+  position: absolute;
+  inset: -120%;
+  background: radial-gradient(circle at center, rgba(255, 184, 97, 0.4), rgba(255, 107, 61, 0.16), transparent 70%);
+  animation: flame-burst 340ms ease-out forwards;
+  pointer-events: none;
 }
 
 .pill-cta {
