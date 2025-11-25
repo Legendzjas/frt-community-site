@@ -1,98 +1,121 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <>
-      {/* HERO volcanique avec ton fond Hero.png (géré dans globals.css) */}
       <section className="hero">
-        <div
-          className="container"
-          style={{ maxWidth: "900px", margin: "0 auto" }}
-        >
-          <span className="badge">🔥 Communauté FRT</span>
+        <div className="shell hero-grid">
+          <div>
+            <span className="badge">
+              <span className="dot" />
+              Communauté FRT
+            </span>
+            <h1 className="title">
+              La fraternité <span className="gradient-text">renaît des cendres</span>.
+            </h1>
+            <p className="lead">
+              Bienvenue chez <strong>FRT — Fraternity</strong>, un foyer pour les joueurs
+              francophones qui veulent progresser ensemble. Ce site est le hub de la
+              communauté et sera bientôt relié au <strong>FRT Bot</strong> pour relier nos
+              serveurs, Discord et vos commandes en jeu.
+            </p>
 
-          <h1 className="title">
-            La fraternité <span className="phoenix-text">renaît des cendres</span>.
-          </h1>
+            <ul className="list">
+              <li>Infos à jour sur nos serveurs ARK et futurs projets.</li>
+              <li>Cartes des streamers FRT à soutenir en live.</li>
+              <li>Accès rapide : Discord, liens Steam, et bientôt le bot.</li>
+            </ul>
 
-          <p className="lead">
-            Bienvenue chez <strong>Fraternity - FRT</strong> !
-            <br />
-            Voici notre site spécifique pour notre communauté :
-          </p>
+            <div className="cta-row">
+              <Link className="btn" href="/servers">
+                Voir les serveurs
+              </Link>
+              <Link className="btn secondary" href="/streamers">
+                Découvrir les streamers
+              </Link>
+              <a
+                className="btn ghost"
+                href="https://discord.gg/mMgaaytKgJ"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Rejoindre le Discord
+              </a>
+            </div>
 
-          <ul style={{ marginTop: 8, paddingLeft: 20 }}>
-            <li>Informations</li>
-            <li>Les streamers de notre communauté</li>
-            <li>Les accès à nos serveurs</li>
-          </ul>
+            <div className="microcopy">
+              <span className="pill">Synchronisé avec FRT Bot</span>
+              <span className="pill">Serveurs ARK Evolved & Ascended</span>
+              <span className="pill">Communauté francophone</span>
+            </div>
+          </div>
 
-          <p className="lead" style={{ marginTop: 10 }}>
-            À chaque nouveau membre nous grandissons !
-            <br />
-            <em>« Là où d’autres tombent, nous renaissons »</em>
-          </p>
-
-          <div
-            style={{
-              display: "flex",
-              gap: 12,
-              marginTop: 18,
-              flexWrap: "wrap",
-            }}
-          >
-            <a className="btn" href="/servers">
-              Voir les serveurs
-            </a>
-            <a className="btn ghost" href="/streamers">
-              Découvrir les streamers
-            </a>
-            <a className="btn ghost" href="/history">
-              Découvre l&apos;histoire de FRT
-            </a>
+          <div className="hero-card">
+            <div className="rows">
+              <div className="stat">
+                <span className="dot" />
+                <div>
+                  <div className="muted">FRT Bot</div>
+                  <div>Arrive bientôt : commandes Discord + outils serveurs.</div>
+                </div>
+              </div>
+              <div className="stat">
+                <span className="dot" />
+                <div>
+                  <div className="muted">Serveurs phénix</div>
+                  <div>ARK: Survival Evolved · ARK: Survival Ascended.</div>
+                </div>
+              </div>
+              <div className="stat">
+                <span className="dot" />
+                <div>
+                  <div className="muted">Communauté</div>
+                  <div>Streamers, events, guides, entraide en vocal.</div>
+                </div>
+              </div>
+            </div>
+            <div className="tag-row">
+              <span className="tag">Liens Steam directs</span>
+              <span className="tag">IPs visibles</span>
+              <span className="tag">Discord FRT</span>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Cartes d’accès */}
-      <section style={{ paddingTop: 32 }}>
+      <section className="shell">
         <div className="grid">
-          {/* Serveurs */}
           <article className="card">
-            <h3>🎮 Serveurs</h3>
+            <h3>Serveurs FRT</h3>
             <p>
-              Consulte l’état de nos serveurs FRT et les informations importantes
-              (IP, ports, type de serveur…).
+              Suis l&apos;état de nos serveurs et connecte-toi en un clic sur PC via Steam.
+              Les IPs et cartes sont toujours à jour.
             </p>
-            <a className="btn" href="/servers">
-              Voir le suivi
-            </a>
+            <Link className="btn" href="/servers">
+              Accéder aux serveurs
+            </Link>
           </article>
 
-          {/* Streamers */}
           <article className="card">
-            <h3>📺 Streamers</h3>
+            <h3>Streamers officiels</h3>
             <p>
-              Découvre les streamers de la communauté FRT et soutiens-les en live.
+              Encourage les créateurs de la communauté FRT. Twitch, YouTube… toutes les
+              chaînes sont listées ici.
             </p>
-            <a className="btn" href="/streamers">
+            <Link className="btn secondary" href="/streamers">
               Voir les chaînes
-            </a>
+            </Link>
           </article>
 
-          {/* Discord (ancien liens rapides) */}
           <article className="card">
-            <h3>💬 Rejoindre Discord</h3>
+            <h3>FRT Bot & ressources</h3>
             <p>
-              Rejoins le serveur Discord FRT pour discuter, suivre les annonces
-              et participer aux événements.
+              Les liens rapides pour rejoindre Discord, lancer les jeux et (bientôt) les
+              commandes du bot FRT.
             </p>
-            <a
-              className="btn"
-              href="https://discord.gg/mMgaaytKgJ"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Rejoindre FRT
-            </a>
+            <Link className="btn ghost" href="/links">
+              Liens rapides
+            </Link>
           </article>
         </div>
       </section>

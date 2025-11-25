@@ -1,73 +1,69 @@
+import Image from "next/image";
+
 export default function ServersPage() {
   return (
-    <section style={{ paddingTop: 32, paddingBottom: 32 }}>
-      <h1 className="title" style={{ fontSize: "2.2rem", marginBottom: 12 }}>
-        Serveurs FRT
-      </h1>
-
-      <p className="lead">
-        Voici les serveurs de la communauté <strong>FRT</strong>. Tu trouveras
-        ici les informations principales et des boutons de connexion rapide
-        lorsque c&apos;est possible.
-      </p>
-
-      <div className="grid" style={{ marginTop: 24 }}>
-        {/* ARK: Survival Evolved */}
-        <article className="card">
-          <h2 style={{ marginTop: 0 }}>🦖 ARK: Survival Evolved</h2>
-          <p>
-            Serveur FRT sur <strong>ARK: Survival Evolved</strong>, pensé pour
-            jouer ensemble dans la bonne humeur.
+    <section className="shell">
+      <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
+        <Image
+          src="/frt-logo.svg"
+          alt="Logo FRT"
+          width={44}
+          height={44}
+          priority
+        />
+        <div>
+          <h1 className="section-head" style={{ margin: 0 }}>
+            Serveurs FRT
+          </h1>
+          <p className="section-sub" style={{ margin: "4px 0 0" }}>
+            Infos, IP et boutons de connexion directe. Si Steam est installé sur ton PC,
+            clique et rejoins la partie en quelques secondes.
           </p>
-          <ul style={{ marginTop: 8, paddingLeft: 18 }}>
-            <li>Nom serveur : <strong>FRTUNITY</strong></li>
+        </div>
+      </div>
+
+      <div className="grid">
+        <article className="card">
+          <h2>ARK: Survival Evolved</h2>
+          <p>
+            Serveur pensé pour jouer ensemble dans une ambiance fraternelle. Sauvegardes
+            régulières et règles simples pour rester fair-play.
+          </p>
+          <ul className="list">
+            <li>Nom : <strong>FRTUNITY</strong></li>
             <li>IP : <code>46.251.242.49</code></li>
             <li>Port jeu : <code>11777</code></li>
             <li>Query port : <code>11778</code></li>
             <li>Carte actuelle : Fjordur</li>
           </ul>
-
-          <p style={{ marginTop: 8 }}>
-            💡 Sur PC (Steam), tu peux utiliser le bouton ci-dessous :
+          <p className="muted" style={{ marginTop: 12 }}>
+            Sur PC (Steam), tu peux utiliser le bouton ci-dessous :
           </p>
-
-          <a
-            className="btn"
-            href="steam://connect/46.251.242.49:11778/FRTUNITY"
-          >
+          <a className="btn" href="steam://connect/46.251.242.49:11778/FRTUNITY">
             Connexion rapide Steam
           </a>
         </article>
 
-        {/* ARK: Survival Ascended */}
         <article className="card">
-          <h2 style={{ marginTop: 0 }}>🦕 ARK: Survival Ascended</h2>
-          <p>
-            Serveur FRT sur <strong>ARK: Survival Ascended</strong> (Nitrado).
-          </p>
-          <ul style={{ marginTop: 8, paddingLeft: 18 }}>
-            <li>Nom serveur : <strong>FRATERNITY</strong></li>
+          <h2>ARK: Survival Ascended</h2>
+          <p>Serveur Nitrado FRT pour la nouvelle génération d&apos;ARK.</p>
+          <ul className="list">
+            <li>Nom : <strong>FRATERNITY</strong></li>
             <li>IP : <code>37.10.115.184</code></li>
             <li>Port jeu : <code>8140</code></li>
             <li>Carte actuelle : Ragnarok_WP</li>
           </ul>
 
-          <p style={{ marginTop: 8 }}>
-            🔗 ASA ne propose pas toujours un lien &quot;officiel&quot; comme Evolved,
-            mais sur PC via Steam tu peux tester ce bouton de connexion directe :
+          <p className="muted" style={{ marginTop: 12 }}>
+            ASA n&apos;a pas toujours un lien officiel, mais sur PC via Steam tu peux
+            tenter la connexion directe :
           </p>
-
-          <a
-            className="btn"
-            href="steam://connect/37.10.115.184:8140"
-          >
+          <a className="btn" href="steam://connect/37.10.115.184:8140">
             Connexion Steam (Ascended)
           </a>
-
-          <p style={{ marginTop: 8, fontSize: "0.9rem", opacity: 0.85 }}>
-            Si le bouton ne fonctionne pas, ajoute le serveur via l&apos;onglet
-            &quot;Favoris&quot; de Steam ou directement depuis la liste de serveurs
-            en utilisant l&apos;IP et le port ci-dessus.
+          <p className="muted" style={{ marginTop: 10 }}>
+            Si le bouton ne fonctionne pas : ajoute l&apos;IP dans l&apos;onglet
+            <em> Favoris</em> de Steam puis rejoins depuis la liste des serveurs.
           </p>
         </article>
       </div>

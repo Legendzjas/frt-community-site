@@ -1,17 +1,36 @@
-export default function Links(){
+export default function Links() {
   const links = [
-    { label: "Lancer Steam (ARK)", href: "steam://rungameid/346110" },
-    { label: "Serveur Discord PHF", href: "https://discord.gg/xxxxxxx" }
+    {
+      label: "Lancer ARK: Survival Evolved (Steam)",
+      href: "steam://rungameid/346110",
+      description: "Ouvre ARK via Steam sur PC. Assure-toi d’avoir Steam lancé.",
+    },
+    {
+      label: "Serveur Discord FRT",
+      href: "https://discord.gg/mMgaaytKgJ",
+      description: "Rejoins la communauté, les annonces et les salons vocaux.",
+    },
   ];
+
   return (
-    <section>
-      <h1>Liens rapides</h1>
-      <p>Les liens <code>steam://</code> fonctionnent si Steam est installé sur la machine.</p>
-      <ul>
-        {links.map((l,i)=>(
-          <li key={i}><a href={l.href}>{l.label}</a></li>
+    <section className="shell">
+      <h1 className="section-head">Liens rapides</h1>
+      <p className="section-sub">
+        Les liens <code>steam://</code> fonctionnent si Steam est installé sur la
+        machine. Ajoute cette page en favori pour garder tout sous la main.
+      </p>
+
+      <div className="grid">
+        {links.map((link) => (
+          <article key={link.href} className="card">
+            <h3>{link.label}</h3>
+            <p>{link.description}</p>
+            <a className="btn secondary" href={link.href} target="_blank" rel="noreferrer">
+              Ouvrir
+            </a>
+          </article>
         ))}
-      </ul>
+      </div>
     </section>
   );
 }

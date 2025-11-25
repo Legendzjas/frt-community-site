@@ -1,0 +1,35 @@
+name: Build and Trigger Deploy
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Trigger Vercel deploy hook (optional)
+        if: env.VERCEL_DEPLOY_HOOK != ''
+        run: |
+          echo "Calling Vercel deploy hook..."
+          curl -X POST "$VERCEL_DEPLOY_HOOK"
