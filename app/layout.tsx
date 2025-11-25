@@ -49,11 +49,12 @@ export default function RootLayout({
               >
                 <span className="brand-mark" aria-hidden>
                   <Image
-                    src="/frt-logo.svg"
+                    src="/frt-logo.gif"
                     alt=""
                     width={46}
                     height={46}
                     priority
+                    unoptimized
                   />
                 </span>
                 <span className="brand-meta">

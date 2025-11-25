@@ -1,9 +1,0 @@
-{
-  "/_not-found/page": "app/_not-found/page.js",
-  "/api/server-status/route": "app/api/server-status/route.js",
-  "/servers/page": "app/servers/page.js",
-  "/links/page": "app/links/page.js",
-  "/history/page": "app/history/page.js",
-  "/page": "app/page.js",
-  "/streamers/page": "app/streamers/page.js"
-}

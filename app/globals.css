@@ -23,9 +23,10 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(1200px 600px at 80% -5%, rgba(255, 179, 71, 0.18), transparent),
-    radial-gradient(1000px 540px at 8% 10%, rgba(62, 214, 255, 0.12), transparent),
-    linear-gradient(180deg, rgba(7, 5, 12, 0.95), #05040a 64%);
+    radial-gradient(1400px 700px at 82% -8%, rgba(255, 120, 60, 0.18), transparent 68%),
+    radial-gradient(1200px 620px at 12% 8%, rgba(62, 214, 255, 0.14), transparent 70%),
+    linear-gradient(180deg, rgba(7, 5, 12, 0.9), rgba(5, 4, 10, 0.98) 65%),
+    url("/Hero.png") center/cover fixed no-repeat;
   color: var(--text);
   font-family: var(--font-body), "Space Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
   line-height: 1.6;
@@ -236,13 +237,30 @@ a {
   background: linear-gradient(120deg, var(--accent), var(--accent-2));
   color: #0c0a10;
   box-shadow: 0 16px 36px rgba(255, 107, 61, 0.28);
-  transition: transform 120ms ease, opacity 120ms ease;
+  transition: transform 120ms ease, opacity 120ms ease, box-shadow 160ms ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .btn:hover,
 .btn:focus-visible {
   transform: translateY(-2px);
   opacity: 0.95;
+  box-shadow: 0 18px 40px rgba(255, 107, 61, 0.33);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.btn:active::after {
+  content: "";
+  position: absolute;
+  inset: -120%;
+  background: radial-gradient(circle at center, rgba(255, 184, 97, 0.55), rgba(255, 107, 61, 0.15), transparent 70%);
+  animation: flame-burst 320ms ease-out forwards;
+  pointer-events: none;
 }
 
 .btn.secondary {
@@ -374,6 +392,21 @@ code {
   border-radius: 6px;
   padding: 2px 6px;
   font-size: 0.95em;
+}
+
+@keyframes flame-burst {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.55;
+  }
+  60% {
+    transform: scale(1.15);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1.45);
+    opacity: 0;
+  }
 }
 
 @media (max-width: 960px) {
