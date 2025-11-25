@@ -1,64 +1,64 @@
-import "./../styles/globals.css";
+import "./globals.css";
+import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
-export const metadata = {
-  title: "FRT — Fraternity | Communauté Gaming",
-  description:
-    "Site communautaire FRT : informations, streamers et accès aux serveurs.",
+export const metadata: Metadata = {
+  title: "FRT — Fraternity",
+  description: "Communauté gaming FRT — Là où d’autres tombent, nous renaissons.",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="fr">
-      <body>
-        <header>
-          <div
-            className="container"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-            }}
-          >
-            {/* Zone logo + texte FRT */}
-            <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
-              {/* LOGO FRT à la place du rond orange */}
+      <body className="bg-[#08070b] text-white">
+        {/* HEADER */}
+        <header className="border-b border-white/5 bg-[#08070b]/80 backdrop-blur">
+          <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+
+            {/* 🔥 LOGO FRT + TEXTE */}
+            <div className="flex items-center gap-3">
               <Image
-                src="/frt-logo.png"    // <- mets ici le nom exact de ton fichier dans /public
+                src="/frt-logo.png"   // IMPORTANT : le fichier dans /public
                 alt="Logo FRT"
-                width={40}
-                height={40}
+                width={42}
+                height={42}
+                className="rounded-full object-cover"
                 style={{
-                  borderRadius: "50%",
-                  objectFit: "cover",
-                  boxShadow: "0 0 12px rgba(255,91,46,0.7)",
+                  boxShadow: "0 0 14px rgba(255,120,60,0.7)",
                 }}
               />
 
-              <div>
-                <strong style={{ display: "block", fontSize: "1.05rem" }}>
+              <div className="leading-tight">
+                <div className="text-sm font-semibold tracking-wide">
                   FRT — Fraternity
-                </strong>
-                <small style={{ opacity: 0.8, fontSize: "0.85rem" }}>
+                </div>
+                <div className="text-xs text-white/60">
                   Là où d’autres tombent, nous renaissons
-                </small>
+                </div>
               </div>
             </div>
 
-            {/* Navigation */}
-            <nav>
-              <a href="/">Accueil</a>
-              <a href="/servers">Serveurs</a>
-              <a href="/streamers">Streamers</a>
-              <a href="/links">Liens</a>
+            {/* NAVIGATION */}
+            <nav className="flex items-center gap-6 text-sm text-white/70">
+              <Link href="/" className="hover:text-white transition">Accueil</Link>
+              <Link href="/servers" className="hover:text-white transition">Serveurs</Link>
+              <Link href="/streamers" className="hover:text-white transition">Streamers</Link>
+              <Link href="/links" className="hover:text-white transition">Liens</Link>
             </nav>
           </div>
         </header>
 
-        <main className="container">{children}</main>
+        {/* CONTENU DES PAGES */}
+        <main className="min-h-screen">{children}</main>
 
-        <footer className="container">
-          © {new Date().getFullYear()} FRT — Communauté gaming. Tous droits réservés.
+        {/* FOOTER */}
+        <footer className="border-t border-white/5 py-6 text-center text-xs text-white/40">
+          © {new Date().getFullYear()} FRT — Fraternity. Tous droits réservés.
         </footer>
       </body>
     </html>
