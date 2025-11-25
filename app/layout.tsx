@@ -1,4 +1,5 @@
 import "./../styles/globals.css";
+import Image from "next/image";
 
 export const metadata = {
   title: "FRT — Fraternity | Communauté Gaming",
@@ -19,18 +20,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               justifyContent: "space-between",
             }}
           >
+            {/* Zone logo + texte FRT */}
             <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
-              {/* Pastille « logo » FRT */}
-              <div
+              {/* LOGO FRT à la place du rond orange */}
+              <Image
+                src="/frt-logo.png"    // <- mets ici le nom exact de ton fichier dans /public
+                alt="Logo FRT"
+                width={40}
+                height={40}
                 style={{
-                  width: 36,
-                  height: 36,
                   borderRadius: "50%",
-                  background:
-                    "radial-gradient(circle at 35% 30%, var(--glow), var(--lava))",
-                  boxShadow: "0 0 10px rgba(255,91,46,0.6)",
+                  objectFit: "cover",
+                  boxShadow: "0 0 12px rgba(255,91,46,0.7)",
                 }}
               />
+
               <div>
                 <strong style={{ display: "block", fontSize: "1.05rem" }}>
                   FRT — Fraternity
@@ -40,6 +44,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </small>
               </div>
             </div>
+
+            {/* Navigation */}
             <nav>
               <a href="/">Accueil</a>
               <a href="/servers">Serveurs</a>
