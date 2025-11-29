@@ -30,7 +30,7 @@ body {
   color: var(--text);
   font-family: var(--font-body), "Space Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
   line-height: 1.6;
-  cursor: none;
+  cursor: url("/cursor-flame-arrow.svg") 4 2, auto;
 }
 
 a {
@@ -112,7 +112,7 @@ a {
   border-radius: 10px;
   position: relative;
   overflow: hidden;
-  cursor: none;
+  cursor: url("/cursor-flame-hand.svg") 8 2, pointer;
 }
 
 .nav a:hover,
@@ -276,7 +276,7 @@ a {
   transition: transform 120ms ease, opacity 120ms ease, box-shadow 160ms ease;
   position: relative;
   overflow: hidden;
-  cursor: none;
+  cursor: url("/cursor-flame-hand.svg") 8 2, pointer;
 }
 
 .btn:hover,
@@ -481,61 +481,6 @@ code {
   }
 }
 
-/* ============ Curseur phénix animé ============ */
-.phoenix-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 42px;
-  height: 42px;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  z-index: 9999;
-  mix-blend-mode: screen;
-}
-
-.phoenix-svg {
-  width: 42px;
-  height: 42px;
-  transform: translate(-8px, -10px);
-  filter:
-    drop-shadow(0 0 10px rgba(255, 166, 94, 0.65))
-    drop-shadow(0 0 14px rgba(255, 104, 52, 0.5));
-}
-
-.phoenix-svg .wing {
-  transform-origin: center;
-  animation: flap 520ms ease-in-out infinite;
-}
-
-.phoenix-svg .wing-right {
-  animation-delay: -90ms;
-}
-
-.spark {
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 210, 140, 0.7), rgba(255, 120, 60, 0.3), transparent 70%);
-  opacity: 0;
-  transform: scale(0.6);
-}
-
-.spark-active {
-  animation: spark-burst 320ms ease-out forwards;
-}
-
-@keyframes flap {
-  0% { transform: rotate(-14deg) scaleY(1); }
-  50% { transform: rotate(18deg) scaleY(1.12); }
-  100% { transform: rotate(-14deg) scaleY(1); }
-}
-
-@keyframes spark-burst {
-  0% { opacity: 0.6; transform: scale(0.6); }
-  70% { opacity: 0.25; transform: scale(1.25); }
-  100% { opacity: 0; transform: scale(1.6); }
-}
 
 @media (max-width: 960px) {
   .header-inner {

@@ -1,0 +1,19 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="handFire" x1="16" y1="6" x2="42" y2="44" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffe89c"/>
+      <stop offset="0.4" stop-color="#ffb347"/>
+      <stop offset="1" stop-color="#ff4b2b"/>
+    </linearGradient>
+    <linearGradient id="handEdge" x1="18" y1="6" x2="32" y2="30" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff0c8"/>
+      <stop offset="1" stop-color="#ff9a3d"/>
+    </linearGradient>
+  </defs>
+  <path d="M18 8c0-1.1.9-2 2-2h2c1.1 0 2 .9 2 2v8" fill="url(#handEdge)"/>
+  <path d="M24 10c0-1.1.9-2 2-2h2c1.1 0 2 .9 2 2v9" fill="url(#handEdge)"/>
+  <path d="M29 12c0-1.1.9-2 2-2h2c1.1 0 2 .9 2 2v11" fill="url(#handEdge)"/>
+  <path d="M34 15c0-1.1.9-2 2-2h.5c1.1 0 2 .9 2 2v12.5c0 4.5-2.4 8.7-6.3 11l-3.2 1.9c-2 1.2-4.6 1-6.4-.4L18 36l-2.5 2.1c-1.5 1.2-3.7.8-4.7-.7-1.2-1.7-.7-4.1.9-5.3l5-3.6V11c0-1.1.9-2 2-2h1c1.1 0 2 .9 2 2v8" fill="url(#handFire)" opacity="0.96"/>
+  <path d="M18 31c-1.4 1.5-2.4 3.6-2.1 5.7.2 1.5 1.2 3.2 2.8 3.8 1.9.7 4-.3 5.5-1.5 1.9-1.5 3.5-3.8 3.5-6.3 0-1.7-.9-3.2-1.8-4.6" stroke="#ffde9a" stroke-width="2" stroke-linecap="round" opacity="0.65"/>
+  <path d="M24.5 30.5c.5 1.5 1.6 2.6 2.9 3.4 1.3.8 2.9 1.2 4 2.3.9.9 1.5 2.3 1.2 3.5-.3 1.6-1.6 3-3.1 3.6-2 .9-4.5.6-6.2-.7" stroke="#ffb347" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+</svg>

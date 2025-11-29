@@ -1,0 +1,17 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="arrowFire" x1="10" y1="6" x2="40" y2="46" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffeb9a"/>
+      <stop offset="0.35" stop-color="#ffb347"/>
+      <stop offset="1" stop-color="#ff4b2b"/>
+    </linearGradient>
+    <linearGradient id="arrowEdge" x1="12" y1="6" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffeec0"/>
+      <stop offset="1" stop-color="#ff9a3d"/>
+    </linearGradient>
+  </defs>
+  <path d="M6 4l20 14-7 3 9 10-5 3-9-11-4 6z" fill="url(#arrowEdge)"/>
+  <path d="M6 4l21 8c2 0.8 3.1 3 2.2 5.1L26 24l3.5 4.2c1.3 1.6 1 3.9-.5 5.2l-3.9 3.3-8.7-11-4 6z" fill="url(#arrowFire)" opacity="0.95"/>
+  <path d="M19 31c-1.2 1.6-2.1 3.7-2 5.7.1 1.3.7 2.7 2.1 3.4 1.6.8 3.5.2 4.9-.7 1.6-1.1 3.2-2.8 3.5-4.8.2-1.5-.6-3-1.6-4.1" stroke="#ffde9a" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  <path d="M24 28c.4 1.8 1.7 3.1 3.2 3.9 1.5.8 3.3 1.2 4.4 2.5.7.8 1.2 1.9 1.1 3-.1 1.5-1.3 2.8-2.6 3.5-1.8 1-4 1-5.8.1" stroke="#ffb347" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+</svg>
