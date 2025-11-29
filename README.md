@@ -30,7 +30,13 @@ BASE_URL=http://localhost:3000
 ## CI / déploiement auto
 - Un workflow GitHub Actions `Build and Trigger Deploy` est présent (`.github/workflows/deploy.yml`).
 - Il s’exécute sur push `main/master` et sur déclenchement manuel, installe, puis lance `npm run build`.
-- Si tu ajoutes le secret `VERCEL_DEPLOY_HOOK`, le workflow appellera automatiquement ce hook pour déclencher un déploiement Vercel après chaque build réussi.
+- Si tu ajoutes le secret `VERCEL_DEPLOY_HOOK`, le workflow appellera automatiquement ce hook pour déclencher un déploiement Vercel après chaque build réussi. (Sur ce repo, le secret est déjà configuré avec le deploy hook Vercel de la branche `main`, tu n'as donc rien à refaire.)
+
+### Mise en place détaillée (Vercel)
+1. Dans Vercel, crée un **Deploy Hook** pour ta branche (Project Settings → Git → Deploy Hooks) et copie l’URL.
+2. Dans GitHub, va dans **Settings → Secrets and variables → Actions**, ajoute un secret nommé `VERCEL_DEPLOY_HOOK` et colle l’URL.
+3. Push sur `main` ou `master` : le workflow build le site puis appelle le hook pour déclencher le déploiement automatique.
+4. Si besoin, adapte la dernière étape du workflow pour cibler un autre hébergeur en appelant son API.
 
 ## JSONs
 - `public/servers.json` — liste des serveurs à suivre.

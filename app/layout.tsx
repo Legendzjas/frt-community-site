@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { Manrope, Space_Grotesk } from "next/font/google";
+import ClickFlame from "./components/ClickFlame";
+import FlameCursor from "./components/FlameCursor";
 
 const body = Manrope({
   subsets: ["latin"],
@@ -39,6 +41,8 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className={`${body.variable} ${display.variable}`}>
+        <ClickFlame />
+        <FlameCursor />
         <div className="page-frame">
           <header className="site-header">
             <div className="shell header-inner">
