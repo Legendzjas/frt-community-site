@@ -30,7 +30,7 @@ body {
   color: var(--text);
   font-family: var(--font-body), "Space Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
   line-height: 1.6;
-  cursor: url("/cursor-fire.svg") 8 8, auto;
+  cursor: url("/cursor-phoenix.svg") 8 2, auto;
 }
 
 a {
@@ -112,7 +112,7 @@ a {
   border-radius: 10px;
   position: relative;
   overflow: hidden;
-  cursor: url("/cursor-fire.svg") 8 8, pointer;
+  cursor: url("/cursor-phoenix.svg") 8 2, pointer;
 }
 
 .nav a:hover,
@@ -156,6 +156,22 @@ a {
 .page-transition {
   animation: flame-enter 900ms ease-out;
   position: relative;
+  isolation: isolate;
+}
+
+.page-transition::after {
+  content: "";
+  position: absolute;
+  inset: -6%;
+  background:
+    radial-gradient(220px 140px at 40% 35%, rgba(255, 188, 102, 0.35), transparent 60%),
+    radial-gradient(200px 130px at 65% 55%, rgba(255, 115, 70, 0.32), transparent 65%),
+    radial-gradient(340px 220px at 50% 60%, rgba(255, 72, 32, 0.18), transparent 70%);
+  filter: blur(22px);
+  opacity: 0;
+  z-index: -1;
+  animation: flame-bloom 950ms ease-out forwards;
+  pointer-events: none;
 }
 
 .hero {
@@ -260,7 +276,7 @@ a {
   transition: transform 120ms ease, opacity 120ms ease, box-shadow 160ms ease;
   position: relative;
   overflow: hidden;
-  cursor: url("/cursor-fire.svg") 8 8, pointer;
+  cursor: url("/cursor-phoenix.svg") 8 2, pointer;
 }
 
 .btn:hover,
@@ -429,6 +445,39 @@ code {
   100% {
     transform: scale(1.45);
     opacity: 0;
+  }
+}
+
+@keyframes flame-enter {
+  0% {
+    opacity: 0.15;
+    filter: blur(14px);
+    transform: scale(0.94);
+  }
+  35% {
+    opacity: 0.9;
+    filter: blur(8px);
+    transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
+}
+
+@keyframes flame-bloom {
+  0% {
+    opacity: 0;
+    transform: scale(0.85) translateY(8px);
+  }
+  40% {
+    opacity: 0.45;
+    transform: scale(1.05) translateY(-6px);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.2) translateY(-14px);
   }
 }
 
