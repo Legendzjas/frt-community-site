@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { Manrope, Space_Grotesk } from "next/font/google";
+import PageShell from "./page-shell";
 
 const body = Manrope({
   subsets: ["latin"],
@@ -22,7 +23,6 @@ const navLinks = [
   { href: "/servers", label: "Serveurs" },
   { href: "/streamers", label: "Streamers" },
   { href: "/history", label: "Histoire" },
-  { href: "/links", label: "Liens" },
 ];
 
 export const metadata: Metadata = {
@@ -84,7 +84,7 @@ export default function RootLayout({
             </div>
           </header>
 
-          <main className="page-main">{children}</main>
+          <PageShell>{children}</PageShell>
 
           <footer className="site-footer">
             © {new Date().getFullYear()} FRT — Fraternity. Tous droits réservés.

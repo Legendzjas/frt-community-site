@@ -113,8 +113,8 @@ export default function Home() {
               Les liens rapides pour rejoindre Discord, lancer les jeux et (bientôt) les
               commandes du bot FRT.
             </p>
-            <Link className="btn ghost" href="/links">
-              Liens rapides
+            <Link className="btn ghost" href="/history">
+              Découvrir l&apos;histoire FRT
             </Link>
           </article>
         </div>
