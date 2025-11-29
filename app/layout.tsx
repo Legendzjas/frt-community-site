@@ -5,6 +5,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { Manrope, Space_Grotesk } from "next/font/google";
 import PageShell from "./page-shell";
+import CustomCursor from "./custom-cursor";
 
 const body = Manrope({
   subsets: ["latin"],
@@ -89,6 +90,7 @@ export default function RootLayout({
           <footer className="site-footer">
             © {new Date().getFullYear()} FRT — Fraternity. Tous droits réservés.
           </footer>
+          <CustomCursor />
         </div>
       </body>
     </html>

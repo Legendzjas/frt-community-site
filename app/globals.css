@@ -30,7 +30,7 @@ body {
   color: var(--text);
   font-family: var(--font-body), "Space Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
   line-height: 1.6;
-  cursor: url("/cursor-phoenix.svg") 8 2, auto;
+  cursor: none;
 }
 
 a {
@@ -112,7 +112,7 @@ a {
   border-radius: 10px;
   position: relative;
   overflow: hidden;
-  cursor: url("/cursor-phoenix.svg") 8 2, pointer;
+  cursor: none;
 }
 
 .nav a:hover,
@@ -276,7 +276,7 @@ a {
   transition: transform 120ms ease, opacity 120ms ease, box-shadow 160ms ease;
   position: relative;
   overflow: hidden;
-  cursor: url("/cursor-phoenix.svg") 8 2, pointer;
+  cursor: none;
 }
 
 .btn:hover,
