@@ -23,6 +23,7 @@ const navLinks = [
   { href: "/servers", label: "Serveurs" },
   { href: "/streamers", label: "Streamers" },
   { href: "/history", label: "Histoire" },
+  { href: "/leaderboard", label: "Classement" },
 ];
 
 export const metadata: Metadata = {

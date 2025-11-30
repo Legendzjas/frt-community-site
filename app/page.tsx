@@ -33,17 +33,34 @@ export default function Home() {
               <Link className="btn secondary" href="/streamers">
                 Découvrir les streamers
               </Link>
-              <a
-                className="btn ghost"
-                href="https://discord.gg/mMgaaytKgJ"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Rejoindre le Discord
-              </a>
-            </div>
+            <a
+              className="btn ghost"
+              href="https://discord.gg/mMgaaytKgJ"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Rejoindre le Discord FRT"
+              style={{
+                width: 46,
+                height: 46,
+                padding: 10,
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                borderRadius: 14,
+              }}
+            >
+              <img
+                src="/discord-icon.svg"
+                alt=""
+                width={24}
+                height={24}
+                style={{ display: "block" }}
+              />
+              <span className="sr-only">Rejoindre le Discord</span>
+            </a>
+          </div>
 
-            <div className="microcopy">
+          <div className="microcopy">
               <span className="pill">Synchronisé avec FRT Bot</span>
               <span className="pill">Serveurs ARK Evolved & Ascended</span>
               <span className="pill">Communauté francophone</span>
