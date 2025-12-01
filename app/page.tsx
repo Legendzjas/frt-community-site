@@ -30,33 +30,17 @@ export default function Home() {
               <Link className="btn" href="/servers">
                 Voir les serveurs
               </Link>
-              <Link className="btn secondary" href="/streamers">
-                Découvrir les streamers
-              </Link>
+            <Link className="btn secondary" href="/streamers">
+              Découvrir les streamers
+            </Link>
             <a
               className="btn ghost"
               href="https://discord.gg/mMgaaytKgJ"
               target="_blank"
               rel="noreferrer"
               aria-label="Rejoindre le Discord FRT"
-              style={{
-                width: 46,
-                height: 46,
-                padding: 10,
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                borderRadius: 14,
-              }}
             >
-              <img
-                src="/discord-icon.svg"
-                alt=""
-                width={24}
-                height={24}
-                style={{ display: "block" }}
-              />
-              <span className="sr-only">Rejoindre le Discord</span>
+              Rejoindre le Discord
             </a>
           </div>
 

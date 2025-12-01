@@ -75,12 +75,21 @@ export default function RootLayout({
               </nav>
 
               <a
-                className="pill-cta"
+                className="pill-cta discord-cta"
                 href="https://discord.gg/mMgaaytKgJ"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="Rejoindre le Discord"
               >
-                Rejoindre le Discord
+                <Image
+                  src="/discord-icon.svg"
+                  alt=""
+                  width={46}
+                  height={46}
+                  priority
+                  style={{ display: "block" }}
+                />
+                <span className="sr-only">Rejoindre le Discord</span>
               </a>
             </div>
           </header>
