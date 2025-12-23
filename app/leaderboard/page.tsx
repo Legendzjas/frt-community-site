@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import type { CSSProperties } from "react";
 
 type Entry = {
   user_id: string;
@@ -121,13 +122,13 @@ export default function LeaderboardPage() {
   );
 }
 
-const thStyle: React.CSSProperties = {
+const thStyle: CSSProperties = {
   padding: "10px 8px",
   fontWeight: 700,
   fontSize: "0.9rem",
 };
 
-const tdStyle: React.CSSProperties = {
+const tdStyle: CSSProperties = {
   padding: "10px 8px",
   fontSize: "0.95rem",
 };

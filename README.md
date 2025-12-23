@@ -35,4 +35,3 @@ BASE_URL=http://localhost:3000
 ## JSONs
 - `public/servers.json` — liste des serveurs à suivre.
 - `public/streamers.json` — liste des streamers.
-- Les liens `steam://` sont dans la page `/links`.

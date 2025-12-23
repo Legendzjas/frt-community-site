@@ -17,36 +17,36 @@ export default function Home() {
               Bienvenue chez <strong>FRT — Fraternity</strong>, un foyer pour les joueurs
               francophones qui veulent progresser ensemble. Ce site est le hub de la
               communauté et sera bientôt relié au <strong>FRT Bot</strong> pour relier nos
-              serveurs, Discord et vos commandes en jeu.
+              jeux, Discord et vos commandes en jeu.
             </p>
 
             <ul className="list">
-              <li>Infos à jour sur nos serveurs ARK et futurs projets.</li>
+              <li>Infos à jour sur nos jeux ARK et futurs projets.</li>
               <li>Cartes des streamers FRT à soutenir en live.</li>
               <li>Accès rapide : Discord, liens Steam, et bientôt le bot.</li>
             </ul>
 
             <div className="cta-row">
-              <Link className="btn" href="/servers">
-                Voir les serveurs
+              <Link className="btn" href="/games">
+                Voir les jeux
               </Link>
-            <Link className="btn secondary" href="/streamers">
-              Découvrir les streamers
-            </Link>
-            <a
-              className="btn ghost"
-              href="https://discord.gg/mMgaaytKgJ"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Rejoindre le Discord FRT"
-            >
-              Rejoindre le Discord
-            </a>
-          </div>
+              <Link className="btn secondary" href="/streamers">
+                Découvrir les streamers
+              </Link>
+              <a
+                className="btn ghost"
+                href="https://discord.gg/mMgaaytKgJ"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Rejoindre le Discord FRT"
+              >
+                Rejoindre le Discord
+              </a>
+            </div>
 
-          <div className="microcopy">
+            <div className="microcopy">
               <span className="pill">Synchronisé avec FRT Bot</span>
-              <span className="pill">Serveurs ARK Evolved & Ascended</span>
+              <span className="pill">Jeux ARK Evolved & Ascended</span>
               <span className="pill">Communauté francophone</span>
             </div>
           </div>
@@ -57,13 +57,13 @@ export default function Home() {
                 <span className="dot" />
                 <div>
                   <div className="muted">FRT Bot</div>
-                  <div>Arrive bientôt : commandes Discord + outils serveurs.</div>
+                  <div>Arrive bientôt : commandes Discord + outils communauté.</div>
                 </div>
               </div>
               <div className="stat">
                 <span className="dot" />
                 <div>
-                  <div className="muted">Serveurs phénix</div>
+                  <div className="muted">Jeux phénix</div>
                   <div>ARK: Survival Evolved · ARK: Survival Ascended.</div>
                 </div>
               </div>
@@ -87,13 +87,13 @@ export default function Home() {
       <section className="shell">
         <div className="grid">
           <article className="card">
-            <h3>Serveurs FRT</h3>
+            <h3>Jeux FRT</h3>
             <p>
-              Suis l&apos;état de nos serveurs et connecte-toi en un clic sur PC via Steam.
-              Les IPs et cartes sont toujours à jour.
+              Retrouvez nos jeux actifs, les règles et les accès rapides pour rejoindre
+              nos serveurs.
             </p>
-            <Link className="btn" href="/servers">
-              Accéder aux serveurs
+            <Link className="btn" href="/games">
+              Accéder aux jeux
             </Link>
           </article>
 
@@ -109,10 +109,9 @@ export default function Home() {
           </article>
 
           <article className="card">
-            <h3>FRT Bot & ressources</h3>
+            <h3>FRT Bot & histoire</h3>
             <p>
-              Les liens rapides pour rejoindre Discord, lancer les jeux et (bientôt) les
-              commandes du bot FRT.
+              Découvre l&apos;histoire de FRT et les prochaines fonctionnalités du bot.
             </p>
             <Link className="btn ghost" href="/history">
               Découvrir l&apos;histoire FRT

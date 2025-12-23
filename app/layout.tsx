@@ -18,14 +18,6 @@ const display = Space_Grotesk({
   variable: "--font-display",
 });
 
-const navLinks = [
-  { href: "/", label: "Accueil" },
-  { href: "/servers", label: "Serveurs" },
-  { href: "/streamers", label: "Streamers" },
-  { href: "/history", label: "Histoire" },
-  { href: "/leaderboard", label: "Classement" },
-];
-
 export const metadata: Metadata = {
   title: "FRT — Fraternity",
   description:
@@ -67,11 +59,22 @@ export default function RootLayout({
               </Link>
 
               <nav className="nav" aria-label="Navigation principale">
-                {navLinks.map((item) => (
-                  <Link key={item.href} href={item.href}>
-                    {item.label}
+                <Link href="/">Accueil</Link>
+                <div className="nav-group">
+                  <Link href="/games" className="nav-trigger" aria-haspopup="true">
+                    Jeux <span aria-hidden>▾</span>
                   </Link>
-                ))}
+                  <div className="nav-menu" role="menu" aria-label="Jeux FRT">
+                    <Link href="/games/ark-evolved">ARK (Evolved)</Link>
+                    <Link href="/games/ark-ascended">ARK (Ascended)</Link>
+                    <Link href="/games/the-ants-underground">
+                      The Ant&apos;s Underground
+                    </Link>
+                  </div>
+                </div>
+                <Link href="/streamers">Streamers</Link>
+                <Link href="/history">Histoire</Link>
+                <Link href="/leaderboard">Classement</Link>
               </nav>
 
               <a
