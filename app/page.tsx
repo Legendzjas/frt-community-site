@@ -83,6 +83,73 @@ export default function Home() {
           </div>
         </div>
       </section>
+<!-- BANNER D'URGENCE - À SUPPRIMER QUAND LE BOT REVIENT -->
+<div style="
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 8px;
+    margin: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+">
+    🚨 **ALERTE URGENCE** 🚨<br>
+    Le bot Discord FRT est temporairement hors ligne.<br>
+    Les fonctionnalités automatiques sont indisponibles.<br>
+    <a href="#urgence" style="color: white; text-decoration: underline;">Voir les informations d'urgence</a>
+</div>
+
+<section id="urgence" class="shell" style="margin-top: 2rem;">
+    <h2 class="section-head">🚨 Mode Urgence Activé</h2>
+    <p class="section-sub">
+        Le bot Discord est actuellement hors service. Voici les informations essentielles :
+    </p>
+
+    <article class="card">
+        <h3>✅ Fonctionnalités Disponibles</h3>
+        <ul class="list">
+            <li>Statut des serveurs ARK (mis à jour manuellement)</li>
+            <li>Informations sur les jeux et streamers</li>
+            <li>Leaderboard (mis à jour manuellement)</li>
+            <li>Site web entièrement fonctionnel</li>
+        </ul>
+    </article>
+
+    <article class="card" style={{ marginTop: 16 }}>
+        <h3>🔄 Mises à Jour Manuelles</h3>
+        <p>
+            Les statuts des serveurs et le leaderboard sont vérifiés et mis à jour manuellement
+            par l'équipe FRT. Les données peuvent avoir un léger retard.
+        </p>
+    </article>
+
+    <article class="card" style={{ marginTop: 16 }}>
+        <h3>📢 Communication</h3>
+        <ul class="list">
+            <li>Restez informés via ce site web</li>
+            <li>Contactez l'équipe sur Discord pour les urgences</li>
+            <li>Suivez les annonces dans #général</li>
+        </ul>
+    </article>
+
+    <article class="card" style={{ marginTop: 16 }}>
+        <h3>🎮 Serveurs de Jeu</h3>
+        <p>
+            Les serveurs ARK restent opérationnels. Utilisez les liens de connexion directe :
+        </p>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+            <a class="btn" href="steam://connect/46.251.242.49:11778/FRTUNITY">
+                🦕 ARK Evolved
+            </a>
+            <a class="btn" href="steam://connect/37.10.100.8:5170">
+                🦕 ARK Ascended
+            </a>
+        </div>
+    </article>
+</section>
+<!-- FIN BANNER D'URGENCE -->
+
 
       <section className="shell">
         <div className="grid">

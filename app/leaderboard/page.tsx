@@ -86,7 +86,6 @@ export default function LeaderboardPage() {
           <table style={{ width: "100%", borderCollapse: "collapse", minWidth: 520 }}>
             <thead>
               <tr style={{ textAlign: "left" }}>
-                <th style={thStyle}>#</th>
                 <th style={thStyle}>Pseudo</th>
                 <th style={thStyle}>Rang évolutif Discord</th>
                 <th style={thStyle}>Nombre de points</th>
@@ -96,7 +95,6 @@ export default function LeaderboardPage() {
             <tbody>
               {formatted.map((entry) => (
                 <tr key={entry.user_id} style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
-                  <td style={tdStyle}>{entry.rank ?? "-"}</td>
                   <td style={{ ...tdStyle, display: "flex", alignItems: "center", gap: 10 }}>
                     {entry.avatar_url ? (
                       <img

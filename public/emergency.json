@@ -1,0 +1,25 @@
+{
+  "emergency_mode": true,
+  "bot_status": "offline",
+  "last_updated": "2026-02-24T12:00:00Z",
+  "message": "Le bot Discord FRT est temporairement hors ligne. Les fonctionnalités automatiques sont indisponibles.",
+  "available_features": [
+    "Statut des serveurs ARK (manuel)",
+    "Informations jeux et streamers",
+    "Leaderboard (manuel)",
+    "Site web fonctionnel"
+  ],
+  "contact": "Restez informés via ce site ou contactez l'équipe sur Discord",
+  "servers": {
+    "ark_evolved": {
+      "name": "FRT ARK Evolved",
+      "connect_url": "steam://connect/46.251.242.49:11778/FRTUNITY",
+      "status": "unknown"
+    },
+    "ark_ascended": {
+      "name": "FRT ARK Ascended",
+      "connect_url": "steam://connect/37.10.100.8:5170",
+      "status": "unknown"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "installCommand": "npm install",
+  "env": {
+    "NEXT_PUBLIC_LEADERBOARD_URL": "https://gist.githubusercontent.com/Legendzjas/e20f975754c21ce53434104edefbdad9/raw/c1056dba0a65a5c4efbd74cf5dc1b28253e88f63/leaderboard.json",
+    "GAMEDIG_ENABLED": "true",
+    "SERVERS_JSON": "./public/servers.json"
+  }
+}

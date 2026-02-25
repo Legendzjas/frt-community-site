@@ -1,14 +1,14 @@
 [
   {
-    "name": "ARK Phoenix #1",
+    "name": "FRT ARK Evolved",
     "type": "arkse",
-    "host": "1.2.3.4",
-    "port": 27015
+    "host": "46.251.242.49",
+    "port": 11778
   },
   {
-    "name": "Minecraft FRT",
-    "type": "minecraft",
-    "host": "mc.example.com",
-    "port": 25565
+    "name": "FRT ARK Ascended",
+    "type": "arksa",
+    "host": "37.10.100.8",
+    "port": 5170
   }
 ]
